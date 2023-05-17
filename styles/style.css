@@ -3,6 +3,7 @@
   background-image: url(../images/newYork.jpg);
   background-size: cover;
   background-position: center;
+  /* background-repeat: no-repeat; */
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -39,7 +40,7 @@
   margin: 0 auto;
   background-color: rgba(1, 1, 1, 0.9);
   border-radius: 10px;
-  padding: 20px;
+  padding: 25px;
 }
 
 .form {
@@ -50,10 +51,16 @@
 
 .form__input {
   border: none;
-  padding: 0;
+  padding: 0 10px;
   border-radius: 20px;
   background-color: rgb(80, 80, 80);
   color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.form__submit:hover {
+  background-color: rgb(143, 143, 143);
 }
 
 .form__submit {
@@ -61,12 +68,18 @@
   padding: 5px;
   width: 32px;
   height: 32px;
-  background-image: url(../images/search.svg);
   background-color: rgb(80, 80, 80);
+  color: white;
   background-position: center center;
   background-size: 24px 24px;
   background-repeat: no-repeat;
   border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.form__submit:hover {
+  background-color: rgb(143, 143, 143);
 }
 
 .weather-data {
@@ -76,7 +89,7 @@
 
 .weather-data__heading {
   margin: 0;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .weather-data__list {
@@ -93,12 +106,17 @@
   padding: 0;
 }
 
-.footer__author {
+.footer {
+  box-sizing: content-box;
   background-color: rgba(1, 1, 1, 0.8);
+}
+
+.footer__author {
   padding: 16px 32px;
   margin: 0;
   color: white;
   text-align: center;
   font-size: 16px;
+  font-weight: 100;
 }
 
