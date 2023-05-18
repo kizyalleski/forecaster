@@ -3,7 +3,7 @@ const apiKey = "0a009c7e910fd010e5052fe3429af814";
 
 function getCityCoords(city) {
   fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=0a009c7e910fd010e5052fe3429af814`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=0a009c7e910fd010e5052fe3429af814`
   )
     .then((response) => response.json())
     .then((data) => fetchWeather(data[0].name, data[0].lat, data[0].lon));
