@@ -91,6 +91,20 @@
   color: white;
 }
 
+.weather-data_loading {
+  visibility: hidden;
+  max-height: 50px;
+  position: relative;
+}
+
+.weather-data_loading::after {
+  visibility: visible;
+  content: 'Loading...';
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
 .weather-data__heading {
   margin: 0;
   padding-bottom: 20px;

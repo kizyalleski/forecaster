@@ -26,6 +26,7 @@ function displayWeather(city, data) {
     wind: data.wind.speed,
   };
 
+  const weatherData = document.querySelector('.weather-data');
   const heading = document.querySelector("#city");
   const temperature = document.querySelector("#temperature");
   const description = document.querySelector("#description");
@@ -40,6 +41,7 @@ function displayWeather(city, data) {
   icon.src = "https://openweathermap.org/img/wn/" + weather.icon + "@2x.png";
   humidity.textContent = "Humidity: " + weather.humidity + "%";
   wind.textContent = "Wind speed: " + weather.wind + "km/h";
+  weatherData.classList.remove('weather-data_loading');
 }
 
 getCityCoords("Chicago");
